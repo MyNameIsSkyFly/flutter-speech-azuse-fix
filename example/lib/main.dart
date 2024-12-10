@@ -4,8 +4,6 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_azure_speech/flutter_azure_speech.dart';
 
-import 'config.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -32,7 +30,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> _initializeSpeechRecognition() async {
     try {
       await _flutterAzureSpeechPlugin.initialize(
-          AppConstants.subscriptionKey, AppConstants.region);
+          'AppConstants.subscriptionKey', 'AppConstants.region');
     } catch (e) {
       print('Error initializing speech recognition: $e');
     }

@@ -8,9 +8,9 @@ class FlutterAzureSpeech {
   }
 
   /// A method channel `FlutterAzureSpeech` instance.
-  Future<void> initialize(String subscriptionKey, String region) async {
+  Future<void> initialize(String authToken, String region) async {
     await FlutterAzureSpeechPlatform.instance
-        .initialize(subscriptionKey, region);
+        .initialize(authToken, region);
   }
 
   /// A method channel `FlutterAzureSpeech` instance.

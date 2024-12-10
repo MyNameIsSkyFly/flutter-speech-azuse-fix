@@ -27,7 +27,7 @@ public class FlutterAzureSpeechPlugin: NSObject, FlutterPlugin {
       }
       self.subscriptionKey = subscriptionKey
       self.region = region
-      result(nil)
+      result(true)
     case "getSpeechToText":
       guard let subscriptionKey = self.subscriptionKey, let region = self.region else {
         result(FlutterError(code: "NOT_INITIALIZED", message: "Plugin not initialized. Call initialize first.", details: nil))

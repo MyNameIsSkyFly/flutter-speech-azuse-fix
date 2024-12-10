@@ -18,7 +18,7 @@ class MethodChannelFlutterAzureSpeech extends FlutterAzureSpeechPlatform {
 
   @override
   Future<void> initialize(String authToken, String region) async {
-    await methodChannel.invokeMethod<bool>('initialize', {
+    await methodChannel.invokeMethod('initialize', {
       'subscriptionKey': authToken,
       'region': region,
     });
