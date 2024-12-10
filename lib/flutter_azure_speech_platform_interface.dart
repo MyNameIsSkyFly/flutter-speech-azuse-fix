@@ -28,7 +28,7 @@ abstract class FlutterAzureSpeechPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<void> initialize(String subscriptionKey, String region) {
+  Future<void> initialize(String authToken, String region) {
     throw UnimplementedError('initialize() has not been implemented.');
   }
 

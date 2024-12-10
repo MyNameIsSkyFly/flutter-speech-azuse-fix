@@ -56,7 +56,7 @@ class FlutterAzureSpeechPlugin: FlutterPlugin, MethodCallHandler {
 
   private fun getSpeechToText(language: String, result: Result) {
     try {
-      val config = SpeechConfig.fromSubscription(subscriptionKey, region)
+      val config = SpeechConfig.fromAuthorizationToken(subscriptionKey, region)
       config.speechRecognitionLanguage = language
       val recognizer = SpeechRecognizer(config)
 

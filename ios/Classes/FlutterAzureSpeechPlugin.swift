@@ -48,7 +48,7 @@ public class FlutterAzureSpeechPlugin: NSObject, FlutterPlugin {
     requestMicrophonePermission { granted in
       if granted {
         do {
-            let speechConfig = try SPXSpeechConfiguration(subscription: subscriptionKey, region: region)
+            let speechConfig = try SPXSpeechConfiguration(authorizationToken: subscriptionKey, region: region)
             speechConfig.speechRecognitionLanguage = language
             let audioConfig = SPXAudioConfiguration()
             let recognizer = try SPXSpeechRecognizer(speechConfiguration: speechConfig, audioConfiguration: audioConfig)
